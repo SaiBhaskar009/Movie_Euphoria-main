@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="/src/app/components/movie-add/movie-add.component.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title"><b>Register User to the Servers</b></div>
+    <div class="content">
+      <form (ngSubmit)="enter_user()">
+        <div class="movie-details">
+          <div class="input-box">
+            <span class="details"><b>Name</b></span>
+            <input type="name"  name="userame" placeholder="Enter the Name of the User" [(ngModel)]="user.username" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Email</b></span>
+            <input type="email" name="email" placeholder="Enter the Registered Mail " [(ngModel)]="user.email" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Password</b></span>
+            <input type="password" name="password" placeholder="Enter the Password" [(ngModel)]="user.password" required>
+          </div>
+          
+        </div>
+        <div class="button">
+          <input type="submit" value="Register User">
+        </div>
+        <a href="login">Already User, Sign in </a>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

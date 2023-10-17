@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="/src/app/components/movie-add/movie-add.component.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title"><b>Add Movie to the Servers</b></div>
+    <div class="content">
+      <form (ngSubmit)="enter_movie()">
+        <div class="movie-details">
+          <div class="input-box">
+            <span class="details"><b>Movie</b></span>
+            <input type="text"  name="Name" placeholder="Enter the Name of the Movie" [(ngModel)]="movie.Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Release Date</b></span>
+            <input type="date" name="Released" placeholder="Enter the Released Year" [(ngModel)]="movie.Released" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Genre</b></span>
+            <input type="text" name="Genre" placeholder="Enter the Genre of the movie" [(ngModel)]="movie.Genre" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>OTT Platform</b></span>
+            <input type="text"  name="OTT" placeholder="Enter the OTT Platform" [(ngModel)]="movie.OTT" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Submit Movie">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
